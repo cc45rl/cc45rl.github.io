@@ -1,10 +1,10 @@
  <!DOCTYPE html>
 <html>
 <head>
-  <title>The site</title>
+  <title>Welcome to the Chaos</title>
   <style>
     body {
-      background-color: rgb(0, 128, 128);
+      background-image: url("bg.png");
       font-family: Tahoma, sans-serif;
       font-size: 12px;
       -webkit-font-smoothing: none;
@@ -94,9 +94,9 @@
       top: 50%;
       transform: translate(-50%, -50%);
       background-color: #fff;
-      width: 300px;
-      height: 200px;
-      border: 2px solid #000;
+      width: 640px;
+      height: 480px;
+      border: 2px solid #404040;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
       z-index: 1;
       overflow: hidden;
@@ -106,7 +106,7 @@
     }
 
     #text-window-title-bar {
-      background-color: #000;
+      background-color: #404040;
       color: #fff;
       padding: 4px;
       cursor: move;
@@ -119,7 +119,7 @@
       right: 2px;
       width: 16px;
       height: 16px;
-      background-image: url("close-button.png");
+      background-image: url("close.BTN");
       background-size: cover;
       cursor: pointer;
     }
@@ -133,13 +133,13 @@
       position: fixed;
       right: 0;
       bottom: 0;
-      background-color: #008080;
-      color: #FFF;
-      font-size: 12px;
+      background-color: transparent; /* Set the background color to transparent */
+      color: #F0F;
+      font-size: 16px;
       text-align: right;
       padding: 2px;
       height: auto;
-      border-top: 0;
+      border-top: none; /* Remove the top border */
       width: 100%;
     }
 
@@ -161,7 +161,7 @@
       background-color: #fff;
       width: 300px;
       height: 150px;
-      border: 2px solid #000;
+      border: 2px solid #404040;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
       z-index: 2;
       overflow: hidden;
@@ -192,27 +192,32 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+
   </style>
 </head>
 <body>
+
+
   <!-- Welcome window container -->
   <div id="welcome-window-container">
     <div id="welcome-window-title">Welcome!</div>
-    <div id="welcome-window-content">Hover over the Home button for stuff.</div>
+    <div id="welcome-window-content">Hover over the About button for stuff.</div>
     <button onclick="hideWelcomeWindow()">Close</button>
   </div>
 
   <nav>
     <ul>
       <li class="dropdown">
-        <a href="#">Home</a>
+        <a href="#">About</a>
         <div class="dropdown-content">
-          <a href="#" onclick="showTextWindow('About')">About</a>
+          <a href="#" onclick="showTextWindow('About')">About This Site</a>
+	  <a href="#" onclick="showTextWindow('Aboutme')">About me</a>
           <a href="#" onclick="showTextWindow('Contact')">Contact</a>
         </div>
       </li>
     </ul>
-    <div class="bar-text">HTML BAR 0.5</div>
+    <div class="bar-text">HTML BAR 1.0</div>
     <div class="clock" id="clock"></div>
   </nav>
 
@@ -229,16 +234,8 @@
       </p>
 
     </div>
+    <div class="resize-handle" id="resize-handle"></div>
   </div>
-
-  <footer>
-    <span class="footer-text">
-      © Copyright J Computers 1893-2023 
-    </span>
-    <span class="footer-text">HTML Bar Version: 0.5</span>
-    <span class="footer-text">HTExplorer DR5</span>
-    <span class="footer-text">Site Version: 5JU23</span>
-  </footer>
 
   <script>
     // Show the text window with the given title and content
@@ -250,7 +247,23 @@
       // Set the title and content based on the clicked link
       if (title === "About") {
         textWindowTitle.textContent = "About";
-        textWindowContent.textContent = "This is the (5JU23) build of this Site, it's not finished, and probably never will be. This window is draggable and closable.";
+        textWindowContent.textContent = "This is the (7JU23) build of this Site, it's not finished, and probably never will be. This window is draggable and closable.";
+    const subtexttop = document.createElement("p");
+    subtexttop.textContent = "Versions:";
+    textWindowContent.appendChild(subtexttop);
+    const subtextMid = document.createElement("p");
+    subtextMid.textContent = "HTExplorer DR7";
+    textWindowContent.appendChild(subtextMid);
+    const subtextMidtop = document.createElement("p");
+    subtextMidtop.textContent = "HTMLBAR 1.0";
+    textWindowContent.appendChild(subtextMidtop);
+    const subtextmidmid = document.createElement("p");
+    subtextmidmid.textContent = "site 7JU23";
+    textWindowContent.appendChild(subtextmidmid);
+    const subtextmidbot = document.createElement("p");
+    subtextmidbot.textContent = "";
+    textWindowContent.appendChild(subtextmidbot);
+
       } else if (title === "Contact") {
         textWindowTitle.textContent = "Contact";
         textWindowContent.textContent = "Ways to contact me:";
@@ -287,13 +300,28 @@
 	  githubLink.href = "https://github.com";
 	  githubLink.textContent = "GitHub: WIP";
 	  textWindowContent.appendChild(subtext5);
+} else if (title === "Aboutme") {
+    textWindowTitle.textContent = "About me";
+    textWindowContent.textContent = "I'm just a 15 (almost 16) yo fur who's about to go insane :3. I love gothic metal and hate anything that is rap/pop.";
+
+    const subtextMiddle = document.createElement("p");
+    subtextMiddle.textContent = "To the people who read this: how did you find this and why are you reading this?";
+    textWindowContent.appendChild(subtextMiddle);
+
+    const subtextBottom = document.createElement("p");
+    subtextBottom.textContent = "Heil Germania!";
+    textWindowContent.appendChild(subtextBottom);
+
+
+    const imageElement = document.createElement("img");
+    imageElement.src = "UGN.flag";
+    textWindowContent.appendChild(imageElement);
 }
 
-      // Show the text window
       textWindow.style.display = "block";
     }
 
-    // Make the text window draggable
+
     var textWindowContainer = document.getElementById("text-window-container");
     var isMouseDown = false;
     var mouseX, mouseY;
@@ -342,6 +370,8 @@
       document.getElementById('clock').textContent = hours + ':' + minutes;
     }
     setInterval(updateClock, 1000);
+
+
   </script>
 </body>
 </html>
