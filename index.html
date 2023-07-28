@@ -134,7 +134,7 @@
       right: 0;
       bottom: 0;
       background-color: transparent; /* Set the background color to transparent */
-      color: #F0F;
+      color: #000;
       font-size: 16px;
       text-align: right;
       padding: 2px;
@@ -237,6 +237,14 @@
     <div class="resize-handle" id="resize-handle"></div>
   </div>
 
+<footer>
+    <span class="footer-text">
+    </span>
+    <span class="footer-text">HTML Bar Version: 1</span>
+    <span class="footer-text">HTExplorer DR8</span>
+    <span class="footer-text">Site Version: 8JU23</span>
+  </footer>
+	
   <script>
     // Show the text window with the given title and content
     function showTextWindow(title) {
@@ -247,18 +255,18 @@
       // Set the title and content based on the clicked link
       if (title === "About") {
         textWindowTitle.textContent = "About";
-        textWindowContent.textContent = "This is the (7JU23) build of this Site, it's not finished, and probably never will be. This window is draggable and closable.";
+        textWindowContent.textContent = "This is the (8JU23) build of this Site, it's not finished, and probably never will be. This window is draggable and closable.";
     const subtexttop = document.createElement("p");
     subtexttop.textContent = "Versions:";
     textWindowContent.appendChild(subtexttop);
     const subtextMid = document.createElement("p");
-    subtextMid.textContent = "HTExplorer DR7";
+    subtextMid.textContent = "HTExplorer DR8";
     textWindowContent.appendChild(subtextMid);
     const subtextMidtop = document.createElement("p");
     subtextMidtop.textContent = "HTMLBAR 1.0";
     textWindowContent.appendChild(subtextMidtop);
     const subtextmidmid = document.createElement("p");
-    subtextmidmid.textContent = "site 7JU23";
+    subtextmidmid.textContent = "site 8JU23";
     textWindowContent.appendChild(subtextmidmid);
     const subtextmidbot = document.createElement("p");
     subtextmidbot.textContent = "";
