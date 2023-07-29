@@ -213,6 +213,7 @@
         <div class="dropdown-content">
           <a href="#" onclick="showTextWindow('About')">About This Site</a>
 	  <a href="#" onclick="showTextWindow('Aboutme')">About me</a>
+	  <a href="#" onclick="showTextWindow('pc11spc')">PC Specs</a>
           <a href="#" onclick="showTextWindow('Contact')">Contact</a>
         </div>
       </li>
@@ -319,11 +320,64 @@
     const subtextBottom = document.createElement("p");
     subtextBottom.textContent = "Heil Germania!";
     textWindowContent.appendChild(subtextBottom);
-
-
     const imageElement = document.createElement("img");
     imageElement.src = "ugn.png";
     textWindowContent.appendChild(imageElement);
+ } else if (title === "pc11spc") {
+    textWindowTitle.textContent = "PC Specs";
+    textWindowContent.textContent = "";
+	
+    const subtextCPU = document.createElement("p");
+    subtextCPU.textContent = "CPU: i7-10700";
+	textWindowContent.appendChild(subtextCPU);
+	
+	const subtextGPU = document.createElement("p");
+    subtextGPU.textContent = "GPU: RTX 2080 SUPER(Zotac)";
+    textWindowContent.appendChild(subtextGPU);	
+	
+	const subtextRAM = document.createElement("p");
+    subtextRAM.textContent = "RAM:4x8GB DDR4 (32GB) 2667Mhz";
+    textWindowContent.appendChild(subtextRAM);	
+	
+	const subtextHDD = document.createElement("p");
+    subtextHDD.textContent = "HDD: Seagate BarraCuda 2TB";
+    textWindowContent.appendChild(subtextHDD);	
+	
+	const subtextSSD = document.createElement("p");
+    subtextSSD.textContent = "SATA SDD: Sandisk 120GB";
+    textWindowContent.appendChild(subtextSSD);	
+	
+	const subtextM2 = document.createElement("p");
+    subtextM2.textContent = "M.2 SDD: Intel 660p 1TB";
+    textWindowContent.appendChild(subtextM2);	
+	
+	const subtextMB = document.createElement("p");
+    subtextMB.textContent = "MB: MPG Z490 GAMING EDGE WIFI";
+    textWindowContent.appendChild(subtextMB);	
+	
+	const subtextMon = document.createElement("p");
+    subtextMon.textContent = "Monitors (from left to right): |LG 23MB35PM-B|BenQ RL2755|Asus VW193D-B|";
+    textWindowContent.appendChild(subtextMon);	
+	
+	const subtextKB = document.createElement("p");
+	subtextKB.textContent = "keyboard:Logitech g413 carbon ";
+    textWindowContent.appendChild(subtextKB);	
+	
+	const subtextms = document.createElement("p");
+	subtextms.textContent = "Mouse: GXT 165";
+    textWindowContent.appendChild(subtextms);	
+	
+	const subtextheadmic = document.createElement("p");
+	subtextheadmic.textContent = "Headset and mic: corsair HS60 pro surround / Samson G-Track Pro";
+    textWindowContent.appendChild(subtextheadmic);	
+	
+	const subtextOS = document.createElement("p");
+	subtextOS.textContent = "OS: Windows 11/Debian";
+    textWindowContent.appendChild(subtextOS);	
+	
+	const subtextother = document.createElement("p");
+    subtextother.textContent = "other PCs/laptops in other window(WIP!)";
+    textWindowContent.appendChild(subtextother);
 }
 
       textWindow.style.display = "block";
