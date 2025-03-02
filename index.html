@@ -294,6 +294,8 @@
     textWindowContent.appendChild(subtextBottom);
     const imageElement = document.createElement("img");
     imageElement.src = "ugn.png";
+    imageElement.style.width = "450px";
+    imageElement.style.height = "250px";
     textWindowContent.appendChild(imageElement);
  } else if (title === "pc11spc") {
     textWindowTitle.textContent = "PC Specs";
@@ -348,7 +350,7 @@
     textWindowContent.appendChild(subtextpsu);		
 	
 	const subtextOS = document.createElement("p");
-	subtextOS.textContent = "OS: Windows Server 2019/fedora";
+	subtextOS.textContent = "OS: Windows Win10/fedora";
     textWindowContent.appendChild(subtextOS);	
 	
 	const subtextother = document.createElement("p");
@@ -360,11 +362,11 @@
     textWindowContent.textContent = "Other PCs/Laptops:";
 	
     const subtextPC1 = document.createElement("p");
-    subtextPC1.textContent = "Dell Inspiron N5110 (-)";
+    subtextPC1.textContent = "Dell Inspiron N5110 (Fedora?)";
 	textWindowContent.appendChild(subtextPC1);
 	
 	const subtextPC2 = document.createElement("p");
-    subtextPC2.textContent = "Acer Aspire 5755G (-)";
+    subtextPC2.textContent = "Acer Aspire 5755G (Fedora)";
 	textWindowContent.appendChild(subtextPC2);
 	
 	const subtextPC4 = document.createElement("p");
@@ -376,7 +378,7 @@
 	textWindowContent.appendChild(subtextPC5);
 	
 	const subtextPC8 = document.createElement("p");
-    subtextPC8.textContent = "Imac mid 2007 (XP/OSX 10.10)";
+    subtextPC8.textContent = "Imac mid 2007 (XP/OS 11)";
 	textWindowContent.appendChild(subtextPC8);
 	
 	const subtextPC9 = document.createElement("p");
